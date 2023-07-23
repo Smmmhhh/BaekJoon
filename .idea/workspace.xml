@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db540760-f45d-4471-9e6b-a79c2ffa6121" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/COTE.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_COTE/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_COTE/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java_COTE/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java_COTE/src/baek_18310_안테나.java" beforeDir="false" afterPath="$PROJECT_DIR$/Java_COTE/src/baek_18310_안테나.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/SMH/IdeaProjects"
   }
