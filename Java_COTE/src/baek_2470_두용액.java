@@ -58,10 +58,10 @@ public class baek_2470_두용액 {
         // 배열 값 입력 받을 때 양수 와 음수 카운터 체크
         for (int i = 0; i < A.length; i++) {
             A[i] = Integer.parseInt(st.nextToken());
-            if (positive == 0 && A[i] > 0) {  //양수가 하나 이상있는지 체크
+            if (positive == 0 && A[i] > 0) {    //양수가 하나 이상있는지 체크
                 positive++;
             } else if (negative == 0 && A[i] < 0) {
-                negative++;                 //음수가 하나 이상있는지 체크
+                negative++;                     //음수가 하나 이상있는지 체크
             }
         }
         find(A, positive, negative);
