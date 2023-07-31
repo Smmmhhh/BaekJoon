@@ -50,6 +50,5 @@ public class baek_18310_안테나 {
         }
 
         find(A);
-
     }
 }

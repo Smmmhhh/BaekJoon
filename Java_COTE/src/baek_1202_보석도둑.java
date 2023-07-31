@@ -60,7 +60,7 @@ public class baek_1202_보석도둑 {
         System.out.println(sum);
     }
 
-    static void jewelPirnt(Jewel[] jw) {
+/*    static void jewelPirnt(Jewel[] jw) {
         for (Jewel e : jw) {
             System.out.println(e.getWeight() + " " + e.getPrice());
         }
@@ -70,7 +70,7 @@ public class baek_1202_보석도둑 {
         for (int e : arr) {
             System.out.print(e + " ");
         }
-    }
+    }*/
 }
 
 class Jewel implements Comparator<Jewel> {
