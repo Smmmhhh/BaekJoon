@@ -1,17 +1,16 @@
 import java.util.Scanner;
 
 public class baek_1012_유기농배추 {
-    static int T;
-    static int cul;
-    static int row;
-    static int q;
-    static int[][] arr;
-    static int count;
-    static boolean v[][];
+    static int[][] arr;                 //배추가 있는 배열
     static int[] dirX = {0, 0, -1, 1};   // 상하좌우 //좌우
     static int[] dirY = {-1, 1, 0, 0};   // 상하좌우 //상하
+    static boolean v[][];               //방문배열
+    static int[] p;                      //출력 배열
+    static int T;                       //TestCase 갯수
+    static int q;                       //배추가 있는 수량
+    static int cul, row;
     static int dC, dR;
-    static int[] p;
+
 
     private static void arrPirint() {
         for (int i = 0; i < arr.length; i++) {
@@ -28,7 +27,6 @@ public class baek_1012_유기농배추 {
         T = sc.nextInt();
         p = new int[T];
         for (int i = 0; i < T; i++) {
-            count = 0;
             //입력받기
             cul = sc.nextInt();
             row = sc.nextInt();
@@ -48,6 +46,7 @@ public class baek_1012_유기농배추 {
     }
 
     private static int Insepection(){
+        int count = 0;
         for(int i = 0; i < arr.length; i++){
             for(int j = 0; j < arr[i].length; j++){
                 if(!v[i][j] && arr[i][j] == 1){
@@ -80,6 +79,7 @@ public class baek_1012_유기농배추 {
 
     public static void main(String[] args) {
         Input();
+        // 카운터 출력
         for(int i = 0; i < T; i++){
             System.out.println(p[i]);
         }

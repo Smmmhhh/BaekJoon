@@ -14,7 +14,7 @@ public class baek_11724_연결요소의개수 {
         ArrayList<Integer>[] list = new ArrayList[N + 1];
         boolean[] visited = new boolean[N + 1];
         for (int i = 1; i <= N; i++) {     //노드번호 1번부터 시작
-            list[i] = new ArrayList<Integer>();
+            list[i] = new ArrayList<>();
         }
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());

@@ -70,7 +70,7 @@ public class baek_2667_단지번호붙이기 {
             nR = dirY[i] + row;
 
             if (rangeCheck() && !v[nC][nR] && arr[nC][nR] == 1) {
-                v[nC][nR] = true;
+                //v[nC][nR] = true;
                 //arr[nC][nR] = number;		//없어도 상관없음 단지별 번호 부여하기 위함
 
                 DFS(nC, nR);
