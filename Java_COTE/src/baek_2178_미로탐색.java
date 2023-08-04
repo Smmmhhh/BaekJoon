@@ -15,8 +15,8 @@ class Bfs {
 public class baek_2178_미로탐색 {
     static int[][] arr;
     static boolean[][] v;
-    static int[] dirX = {0, 0, -1, 1};  //상하좌우 중 좌우
-    static int[] dirY = {-1, 1, 0, 0};  //상하좌우 중 상하
+    static int[] dX = {0, 0, -1, 1};  //상하좌우 중 좌우
+    static int[] dY = {-1, 1, 0, 0};  //상하좌우 중 상하
     static int N, M;
 
     public static void main(String[] args) {
@@ -56,16 +56,16 @@ public class baek_2178_미로탐색 {
             qu.poll();
 
             for (int i = 0; i < 4; i++) {
-                int scul = dirX[i] + cul;
-                int srow = dirY[i] + row;
+                int iCul = dX[i] + cul;
+                int iRow = dY[i] + row;
 
-                if (indexRange(scul, srow) && !v[scul][srow] && arr[scul][srow] <= count && arr[scul][srow] != 0) {
-                    v[scul][srow] = true;         //방문배열 체크
-
+                if (indexRange(iCul, iRow) && !v[iCul][iRow] && arr[iCul][iRow] <= count && arr[iCul][iRow] != 0) {
+                    //방문배열 체크
+                    v[iCul][iRow] = true;
                     //검사 좌표의 인접 좌표들은 현재 검사 좌표 값 +1 을 해준다.
-
-                    arr[scul][srow] = arr[cul][row] + 1;
-                    qu.add(new Bfs(scul, srow));  //큐에 요소삽입
+                    arr[iCul][iRow] = arr[cul][row] + 1;
+                    //큐에 요소삽입
+                    qu.add(new Bfs(iCul, iRow));
                 }
             }
         }
