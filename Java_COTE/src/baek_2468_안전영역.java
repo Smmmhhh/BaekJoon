@@ -19,11 +19,7 @@ public class baek_2468_안전영역 {
         //입력받기
         Input();
         //Inspection
-        if(li.size() == 1){
-            System.out.println(1);      //리스트 요소가 하나만 있을 때는 1출력
-            return;
-        }else ISP();                    //요소가 1이상이면 검사시작
-
+        ISP();
         //리스트 요소 중 가장 큰 값을 출력해야 하므로 내림차순 정렬
         li.sort(Collections.reverseOrder());
         //정답 출력
@@ -53,6 +49,11 @@ public class baek_2468_안전영역 {
     }
 
     private static void ISP() {
+        //리스트 요소가 1이면 수행하지 않고 return
+        if(li.size() == 1){
+            return;
+        }
+
         for (int k = 0; k < li.size(); k++) {   //list 크기만큼 반복
             //방문배열 초기화
             visitArrReset();

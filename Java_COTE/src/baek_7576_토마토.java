@@ -16,19 +16,21 @@ public class baek_7576_토마토 {
     static int count;
 
     public static void main(String[] args) throws IOException {
-        Input();
+        // 입력받기 메서드 호출
+        int size = Input();
         // 입력을 받았는데 익은 토마토가 없다면 -1 출력
-        if(qu.isEmpty()){
+        if(size == 0){
             System.out.println(-1);
             return;
         }
+        // bfs 검사시작
         bfs();
         // 검사를 했지만 처음부터 토마토가 익어있는 상태면 0출력
         if(count == 0){
             System.out.println(0);
             return;
         }
-        // 검사 후 토마토가 익을 최소 일수 출력 하지만 하나라도 익지 않은 토마토가 있으면 -1출력
+        // 박스검사 후 토마토가 익을 최소 일수 출력, 하지만 하나라도 익지 않은 토마토가 있으면 -1출력
         if(boxInspection()){
             System.out.println(count-1);
         }else {
@@ -36,7 +38,7 @@ public class baek_7576_토마토 {
         }
     }
 
-    private static void Input() throws IOException {
+    private static int Input() throws IOException {
         // 상자 크기 입력받기
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());;
@@ -53,15 +55,16 @@ public class baek_7576_토마토 {
             st = new StringTokenizer(br.readLine());
             for(int j = 0; j < N; j++){
                 arr[i][j] = Integer.parseInt(st.nextToken());
+                //익은 토마토는 Queue에 넣어두기
                 if(arr[i][j] == 1){
                     qu.add(new int[] {i, j});
                     v[i][j] = true;
                 }
             }
         }
+        return qu.size();   //익은 토마토 갯수 반환
 /*        //출력테스트
         arrPrint();*/
-
     }
 
     private static void bfs(){
@@ -85,6 +88,10 @@ public class baek_7576_토마토 {
         }
     }
 
+    private static boolean rangeInterlock(int c, int r){
+        return (c >= 0 && c < M) && (r >= 0 && r < N);
+    }
+
     private static boolean boxInspection(){
         for(int i = 0; i < arr.length; i++){
             for(int j = 0; j < arr[i].length; j++){
@@ -94,9 +101,6 @@ public class baek_7576_토마토 {
             }
         }
         return true;
-    }
-    private static boolean rangeInterlock(int c, int r){
-        return (c >= 0 && c < M) && (r >= 0 && r < N);
     }
 
     private static void arrPrint(){
