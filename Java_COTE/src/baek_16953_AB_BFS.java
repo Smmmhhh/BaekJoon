@@ -58,6 +58,7 @@ public class baek_16953_AB_BFS {
         long A = sc.nextLong();
         long B = sc.nextLong();
 
-        System.out.println(bfs(A, B));
+        int result = bfs(A, B);
+        System.out.println(result);
     }
 }
