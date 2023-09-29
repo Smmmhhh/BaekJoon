@@ -13,6 +13,7 @@ public class baek_2839_설탕배달2 {
             else if(N % 3 == 0) N -= 3;
             else if(N >= 5) N -= 5;
             else if(N >= 3) N -= 3;
+
             count++;
 
             if(N == 0){
